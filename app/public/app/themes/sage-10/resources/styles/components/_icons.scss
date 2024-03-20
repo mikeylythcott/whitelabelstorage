@@ -1,0 +1,23 @@
+.icon-1x1-small {
+  width: 1rem;
+  height: 1rem;
+  color: $white;
+  letter-spacing: 0;
+  display: flex;
+}
+
+.icon-1x1-small.blk {
+  color: $black;
+}
+
+.icon-24x24 {
+  width: 24px;
+  height: 24px;
+  color: $white;
+  letter-spacing: 0;
+  flex: none;
+}
+
+.icon-24x24.blk {
+  color: $black;
+}

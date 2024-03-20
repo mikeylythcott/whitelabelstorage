@@ -1,0 +1,181 @@
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+// Colors
+$brand-primary: #646f79;
+
+// Global options
+$enable-flex: true;
+
+// Grid settings
+$main-sm-columns: 12;
+$sidebar-sm-columns: 4;
+
+// Vendor variables
+// $fa-font-path: '~font-awesome/fonts';
+
+/*********************
+GLOBAL VARIABLES
+*********************/
+
+// Fonts
+$serif: serif;
+$montserrat: "Montserrat", sans-serif;
+$lexenddeca: "Lexand Deca", sans-serif;
+
+.montserrat {
+  font-family: Montserrat, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lexand-deca {
+  font-family: "Lexand Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Colors
+$black: #000;
+$white: #fff;
+$blue: #00173c;
+$red: #e62222;
+$gray: #646f79;
+$lightgray: #b5b9be;
+$grayd9: #d9d9d9;
+$lightestgray: #f5f6f8;
+
+// Link Colors
+$link-color: $blue;
+$link-hover: $red;
+
+/*********************
+SASS MIXINS
+*********************/
+
+@mixin linkhover {
+  a,
+  a:visited {
+    color: $link-color;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+}
+
+/*********************
+GUTTER
+*********************/
+
+.container-60 {
+  padding-right: 30px !important;
+  padding-left: 30px !important;
+}
+
+.gutter-60.row {
+  margin-right: -30px;
+  margin-left: -30px;
+}
+
+.gutter-60 > [class^="col-"],
+.gutter-60 > [class*="col-"] {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/*********************
+TRANSITION
+*********************/
+
+@mixin transition($transition...) {
+
+  // defining prefixes so we can use them in mixins below
+  $prefixes: ("-webkit-", "" );
+
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition;
+  }
+}
+
+// Transitions
+
+@mixin transition-all {
+  transition: all 0.35s;
+}
+
+@mixin transitions {
+  transition: all 0.2s ease-in !important;
+}
+
+/*********************
+BORDER RADIUS
+*********************/
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Usage:
+// .button {
+//   @include border-radius(5px);
+// }
+
+/*********************
+OPACITY
+*********************/
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Usage
+// .article-heading {
+//   @include opacity(0.8);
+// }
+
+/*********************
+ELLIPSIS
+*********************/
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Usage
+// .text-truncate {
+//   @include text-truncate;
+// }
+
+/*********************
+FONT SIZE & LINE HEIGHT
+*********************/
+
+@mixin font-size($sizeValue: 12 ) {
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.125 * $sizeValue) + rem;
+}
+
+// Usage
+// body {
+//   @include font-size(16);
+// }
+
+@mixin line-height($heightValue: 12 ) {
+  line-height: $heightValue + px; //fallback for old browsers
+  line-height: (0.125 * $heightValue) + rem;
+}
+
+// Usage
+// body {
+//   @include line-height (16);
+// }

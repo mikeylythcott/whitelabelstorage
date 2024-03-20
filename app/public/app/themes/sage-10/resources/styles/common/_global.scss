@@ -1,0 +1,461 @@
+/* stylelint-disable no-descending-specificity */
+
+/******************************************************************
+Site Name: WLS B2C
+Author: Mike Lythcott
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+  font-family: $lexenddeca;
+  line-height: 1.4em;
+  color: $gray;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $white;
+  font-weight: 300;
+  -webkit-overflow-scrolling: touch;
+  font-size: 18px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body#tinymce {
+  background-color: $white !important;
+  background-image: none;
+  color: $black;
+}
+
+body,
+html {
+  // height: 100%;
+}
+
+body.wp-admin {
+  font-size: 100% !important;
+}
+
+p {
+  line-height: 1.45em;
+  margin-bottom: 1.66em;
+}
+
+/*********************
+SITEWIDE STANARD
+*********************/
+
+// Font Weights
+
+.font-weight-300,
+.text-weight-light {
+  font-weight: 300 !important;
+}
+
+.font-weight-400,
+.text-weight-normal {
+  font-weight: 400 !important;
+}
+
+.font-weight-500,
+.text-weight-medium {
+  font-weight: 500 !important;
+}
+
+.font-weight-600,
+.text-weight-semibold {
+  font-weight: 600 !important;
+}
+
+.font-weight-700,
+.text-weight-bold {
+  font-weight: 700 !important;
+}
+
+.font-weight-800,
+.text-weight-xbold {
+  font-weight: 800 !important;
+}
+
+.font-weight-900,
+.text-weight-black {
+  font-weight: 900 !important;
+}
+
+// text sizes
+
+.font-size-1em {
+  font-size: calc(18 / 18) * 1em;
+}
+
+.text-size-huge-48 {
+  font-size: 42px;
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 48px;
+  }
+}
+
+.text-size-large-36 {
+  font-size: 36px;
+}
+
+.text-size-medium-32 {
+  font-size: 28px;
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 32px;
+  }
+}
+
+.text-size-medium-30 {
+  font-size: 30px;
+}
+
+.text-size-medium-24 {
+  font-size: 21px;
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 24px;
+  }
+}
+
+.text-size-regular-20 {
+  font-size: 20px;
+}
+
+.text-size-regular-21 {
+  font-size: 21px;
+}
+
+.text-size-regular-18 {
+  font-size: 18px;
+}
+
+.text-size-small-16 {
+  font-size: 16px;
+}
+
+.text-size-tiny-14 {
+  font-size: 14px;
+}
+
+.text-size-regular {
+  font-size: 1em;
+}
+
+// text hide
+
+.text-hide {
+  font: 0/0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+// colors
+
+.text-color-red,
+.red {
+  color: $red;
+}
+
+.blue {
+  color: $blue;
+}
+
+.black {
+  color: $black;
+}
+
+.white {
+  color: $white;
+}
+
+.gray,
+.text-color-grey {
+  color: $gray;
+}
+
+.light-gray {
+  color: $lightgray;
+}
+
+.gray-d9 {
+  color: $grayd9;
+}
+
+.background-lightest-gray {
+  background-color: $lightestgray;
+}
+
+// general
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.text-style-strikethrough {
+  text-decoration: line-through;
+}
+
+.border-radius-8px {
+  border-radius: 8px;
+}
+
+.line-height-12 {
+  line-height: 1.2;
+}
+
+.line-height-1-2 {
+  line-height: 1.2em;
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+strong {
+  font-weight: bold;
+}
+
+// misc
+
+.standard-svg-icon {
+  height: 24px;
+}
+
+.reg-link-bold-underline {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a,
+a:visited {
+  color: $link-color;
+
+  @include transitions;
+
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+.red-link-black-hover {
+  color: $red;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.blue-link-red-hover {
+  color: $blue;
+}
+
+.blue-link-red-hover:hover {
+  color: $red;
+}
+
+.gray-to-white-hover {
+  color: $lightgray;
+}
+
+.gray-to-white-hover:hover {
+  color: $white;
+}
+
+.white-link-hover {
+  color: $white;
+}
+
+.white-link-hover:hover {
+  color: $lightgray;
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  line-height: 1.3;
+  text-rendering: optimizelegibility;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $blue;
+  font-family: $montserrat;
+}
+
+h1,
+.h1 {
+  font-size: calc(48 / 18) * 1em;
+}
+
+h2,
+.h2 {
+  font-size: calc(36 / 18) * 1em;
+}
+
+h3,
+.h3 {
+  font-size: calc(30 / 18) * 1em;
+}
+
+h4,
+.h4 {
+  font-size: calc(24 / 18) * 1em;
+}
+
+h5,
+.h5 {
+  font-size: calc(20 / 18) * 1em;
+}
+
+h6,
+.h6 {
+  font-size: calc(18 / 18) * 1em;
+}
+
+/*********************
+LAYOUT & GRID STYLES + BOOTSTRAP CORE OVERRIDE
+*********************/
+
+.container {
+  @media (width <= 575px) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.lightgray-wrapper {
+  background-color: $lightestgray;
+}
+
+.gap-60 {
+  grid-gap: 60px;
+}
+
+.grid-3-up {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+}
+
+@media (width <= 479px) {
+  .grid-3-up {
+    grid-gap: 20px;
+  }
+}
+
+@media (width <= 767px) {
+  .grid-3-up {
+    grid-gap: 25px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width >= 768px) and (width <= 991px) {
+  .grid-3-up {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width >= 1280px) {
+  .grid-3-up {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/*********************
+PADDING / MARGINS
+*********************/
+
+.padding-top-80 {
+  padding-top: 80px;
+
+  @media (width >= 768px) and (width <= 991px) {
+    padding-top: 60px;
+  }
+
+  @media (width >= 576px) and (width <= 767px) {
+    padding-top: 50px;
+  }
+
+  @media (width <= 575px) {
+    padding-top: 40px;
+  }
+}
+
+.padding-top-bottom-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (width >= 768px) and (width <= 991px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (width >= 576px) and (width <= 767px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (width <= 575px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.margin-top-80 {
+  margin-top: 80px;
+
+  @media (width >= 768px) and (width <= 991px) {
+    margin-top: 60px;
+  }
+
+  @media (width >= 576px) and (width <= 767px) {
+    margin-top: 50px;
+  }
+
+  @media (width <= 575px) {
+    margin-top: 40px;
+  }
+}
+
+/*********************
+IMAGES
+*********************/
+
+.image-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* stylelint-enable no-descending-specificity */

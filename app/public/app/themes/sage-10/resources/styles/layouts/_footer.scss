@@ -1,0 +1,38 @@
+/* stylelint-disable no-descending-specificity */
+
+section.footer {
+  padding-bottom: 2.5em;
+  margin-top: 80px;
+  background-color: $blue;
+  color: $white;
+
+  @media (width <= 991px) {
+    padding-top: 60px;
+  }
+}
+
+.footer-logo {
+  width: 125px;
+  height: auto;
+
+  @media (width <= 991px) {
+    width: 100px;
+  }
+}
+
+.footer-contact-wrap {
+  grid-gap: 15px;
+  flex-flow: column;
+  margin-top: 30px;
+  display: flex;
+}
+
+.footer-contact-item {
+  grid-gap: 10px;
+}
+
+.powered-by {
+  opacity: 0.24;
+}
+
+/* stylelint-enable no-descending-specificity */
