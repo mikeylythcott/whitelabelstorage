@@ -188,8 +188,10 @@ SITEWIDE STANARD
   color: $grayd9;
 }
 
+// backgrounds
+
 .background-lightest-gray {
-  background-color: $lightestgray;
+  background-color: rgb(181 185 190 / 10%);
 }
 
 // general
@@ -202,8 +204,22 @@ SITEWIDE STANARD
   text-decoration: line-through;
 }
 
+// borders
+
+.border-light-gray {
+  border: 1px solid rgb(181 185 190 / 30%);
+}
+
 .border-radius-8px {
   border-radius: 8px;
+}
+
+.bordered-box {
+  border: 1px solid $lightgray !important;
+}
+
+.border-top {
+  border-top: 1px solid $lightgray;
 }
 
 .line-height-12 {

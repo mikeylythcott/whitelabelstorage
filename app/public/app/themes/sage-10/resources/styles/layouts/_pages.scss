@@ -371,4 +371,14 @@
   background-color: rgb(247 249 250 / 100%);
 }
 
+// checkout
+
+.iframe-container {
+  iframe {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid 1px solid rgb(181 185 190 / 30%);
+  }
+}
+
 /* stylelint-enable no-descending-specificity */

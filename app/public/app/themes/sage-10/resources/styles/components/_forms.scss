@@ -1,0 +1,22 @@
+label {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $blue;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+::placeholder {
+  color: $lightgray;
+  opacity: 1;
+}
+
+.warning {
+  background-color: rgb(181 185 190 / 30%);
+  border: rgb(181 185 190 / 50%);
+}
+
+input [type="text"],
+input.form-control {
+  background-color: rgb(181 185 190 / 9%) !important;
+}

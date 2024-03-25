@@ -32,6 +32,18 @@
     <?php echo $__env->make('partials.home-faq', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
   
 
+<?php elseif(is_page('full-form')): ?>
+
+  
+    <?php echo $__env->make('partials.checkout-full-form', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+  
+
+<?php elseif(is_page('checkout')): ?>
+
+  
+    <?php echo $__env->make('partials.checkout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+  
+
 <?php else: ?>
 
 <section class="container">

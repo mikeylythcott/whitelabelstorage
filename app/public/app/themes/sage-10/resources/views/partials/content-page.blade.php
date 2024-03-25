@@ -32,6 +32,18 @@
     @include('partials.home-faq')
   {{-- FAQ End --}}
 
+@elseif(is_page('full-form'))
+
+  {{-- Full Form --}}
+    @include('partials.checkout-full-form')
+  {{-- end full form --}}
+
+@elseif(is_page('checkout'))
+
+  {{-- Checkout page 1 --}}
+    @include('partials.checkout')
+  {{-- Checkout page 1 --}}
+
 @else
 
 <section class="container">
